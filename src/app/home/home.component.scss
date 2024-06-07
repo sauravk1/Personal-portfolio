@@ -1,0 +1,53 @@
+.photo {
+    margin-top: 10rem;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+}
+.content {
+    display: flex;
+    margin-bottom: 8rem;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.items {
+    width: 50%;
+}
+.about-me {
+    font-family: cursive;
+    width: 75%;
+}
+.hello {
+    font-size: 5rem;
+}
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+    width: 100%;
+    margin-left: -5rem;
+}
+.buttons {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+.button-resume {
+    background-color: rgba(255, 166, 0, 0.63);
+    &:hover {
+        background-color: antiquewhite;
+    }
+}
+.button-project {
+    background-color: white;
+    &:hover {
+        background-color: antiquewhite;
+    }
+}
+.button-contact {
+    background-color: rgba(0, 128, 0, 0.644);
+    &:hover {
+        background-color: antiquewhite;
+    }
+}

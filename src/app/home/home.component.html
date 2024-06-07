@@ -1,0 +1,20 @@
+<div class="container">
+<app-header></app-header>
+<div class="content">
+    <div class="items">
+        <img class="photo" src="../../assets/photo.jpg" alt="photo">
+    </div>
+    <div class="items">
+        <span class="hello">Hello</span>
+        <h2 style="font-size: 1.3rem;font-weight: 500;">A Bit about me</h2>
+        <p class="about-me">I am a Web Developer. I love to build Web Applications. I love to build Web Applications. I love to build Web Applications.
+
+        <div class="button-container">
+            <button class="buttons button-resume" [routerLink]="['/resume']"><strong>Resume</strong></button>
+            <button class="buttons button-project" [routerLink]="['/projects']"><strong>Projects</strong></button>
+            <button class="buttons button-contact" [routerLink]="['/contacts']"><strong>Contact</strong></button>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+</div>

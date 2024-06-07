@@ -1,0 +1,62 @@
+<div class="container">
+    <app-header></app-header>
+    <div class="my-detail">
+        <div class="phone-info">
+            <strong>Phone</strong>
+            <p>+91-9094617249</p>
+        </div>
+        <div class="email-info">
+            <strong>Email</strong>
+            <p><a href="mailto:ksaurav325@gmail.com">ksaurav325@gmail.com</a></p>
+        </div>
+    </div>
+
+<div class="flex items-center justify-center">
+    <div class="mx-auto w-full max-w-[500px]">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="mb-2">
+          <label
+            for="name"
+            class="mb-3 block text-base font-medium text-[#07074D]"
+          >
+            Full Name *
+          </label>
+        <input type="text" name="name" placeholder="Full Name" formControlName="name"
+            class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+            <div class="error-message" *ngIf="contactForm.controls['name'].hasError('required') && contactForm.controls['name'].touched">Name should not be empty</div>
+        </div>
+        <div class="mb-2">
+        <label for="email" class="mb-3 block text-base font-medium text-[#07074D]">
+            Email Address *
+        </label>
+        <input type="email" name="email" placeholder="example@domain.com" formControlName="email"
+            class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+            <div *ngIf="contactForm.controls['email'].hasError('required') && contactForm.controls['email'].touched" class="error-message">Email should not be empty</div> 
+            <div *ngIf="contactForm.controls['email'].hasError('email') && contactForm.controls['email'].touched" class="error-message">Email should be valid</div>
+        </div>
+        <div class="mb-2">
+        <label for="subject" class="mb-3 block text-base font-medium text-[#07074D]">
+            Subject *
+        </label>
+        <input type="text" name="subject" placeholder="Enter your subject" formControlName="subject"
+            class="w-full rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" />
+            <div class="error-message" *ngIf="contactForm.controls['subject'].hasError('required') && contactForm.controls['subject'].touched">Subject should not be empty</div>
+        </div>
+        <div class="mb-2">
+        <label for="message" class="mb-3 block text-base font-medium text-[#07074D]">
+            Message *
+        </label>
+        <textarea rows="3" name="message" id="message" placeholder="Type your message" formControlName="message"
+            class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-2 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"></textarea>
+            <div class="error-message" *ngIf="contactForm.controls['message'].hasError('required') && contactForm.controls['message'].touched">Message should not be empty</div>
+        </div>
+        <div>
+        <button class="btn btn-primary" type="submit" [disabled]="!contactForm.valid">
+            Submit
+        </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
